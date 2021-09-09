@@ -15,10 +15,10 @@ public class Course {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "name")
+    @Column
     String name;
 
-    @Column(name = "town")
+    @Column
     String town;
 
     @Column(name = "star_rating")
@@ -35,6 +35,8 @@ public class Course {
         this.starRating = starRating;
         this.bookings = new ArrayList<>();
     }
+
+    public Course(){};
 
     public String getName() {
         return name;

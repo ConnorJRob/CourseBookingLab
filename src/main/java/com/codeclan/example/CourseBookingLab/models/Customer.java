@@ -15,13 +15,13 @@ public class Customer {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "name")
+    @Column
     String name;
 
-    @Column(name = "town")
+    @Column
     String town;
 
-    @Column(name = "age")
+    @Column
     int age;
 
     @JsonIgnoreProperties({"customer"})
@@ -35,6 +35,8 @@ public class Customer {
         this.age = age;
         this.bookings = new ArrayList<>();
     }
+
+    public Customer(){};
 
     public Long getId() {
         return id;
